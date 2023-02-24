@@ -6,7 +6,10 @@ with lib;
 
   shangrila = {
     system = enabled;
-    apps = enabled;
+    apps = {
+      gui = enabled;
+      cli = enabled;
+    };
   };
 
   system.stateVersion = "22.05";

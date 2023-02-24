@@ -15,6 +15,8 @@ in
       autorun = false;
       layout = "us";
       xkbVariant = "euro";
+      xkbOptions = "eurosign:e";
+      libinput = enabled;
       displayManager.startx = enabled;
       windowManager.bspwm = enabled;
     };
