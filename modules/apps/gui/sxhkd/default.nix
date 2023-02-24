@@ -15,6 +15,6 @@ in
         SXHKD_SHELL = "/bin/sh";
       };
     };
-    shangrila.home.configFile."sxhkd/shxkdrc".source = ./config;
+    shangrila.home.configFile."sxhkd/sxhkdrc".source = ./config;
   };
 }
