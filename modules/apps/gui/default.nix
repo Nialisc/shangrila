@@ -17,6 +17,7 @@ in
       tofi = enabled;
       mako = enabled;
       vscode = enabled;
+      eww = enabled;
     };
 
     environment.systemPackages = with pkgs; [
