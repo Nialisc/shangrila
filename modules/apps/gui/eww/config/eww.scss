@@ -1,8 +1,16 @@
 .bar {
   font: 14px "FiraCode Nerd Font Mono";
+  font-weight: bold;
   background-color: #232634;
   color: #c6d0f5;
   border-radius: 5px;
+}
+
+.zen_bar {
+  font: 14px "FiraCode Nerd Font Mono";
+  font-weight: bold;
+  background-color: #232634;
+  color: #c6d0f5;
 }
 
 .wrapper {
@@ -14,6 +22,8 @@
 }
 
 .label {
+  margin: 0;
+  padding: 0;
   background-color: #414559;
   border-radius: 5px 0 0 5px;
 }
