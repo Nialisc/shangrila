@@ -11,6 +11,7 @@ in
   config = mkIf cfg.enable {
     shangrila.apps.cli = {
       git = enabled;
+      neovim = enabled;
     };
 
     environment.systemPackages = with pkgs; [
