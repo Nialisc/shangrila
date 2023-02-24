@@ -46,5 +46,7 @@ in
         };
       };
     };
+
+    shangrila.user.extraOptions.shell = pkgs.zsh;
   };
 }
