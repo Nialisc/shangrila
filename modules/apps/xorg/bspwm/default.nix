@@ -1,10 +1,10 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.gui.bspwm;
+let cfg = config.shangrila.apps.xorg.bspwm;
 in
 {
-  options.shangrila.apps.gui.bspwm = with types; {
+  options.shangrila.apps.xorg.bspwm = with types; {
     enable = mkBoolOpt false "Whether or not to enable bspwm.";
   };
 

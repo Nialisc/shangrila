@@ -9,6 +9,7 @@ with lib;
     apps = {
       gui = enabled;
       cli = enabled;
+      xorg = enabled;
     };
   };
 

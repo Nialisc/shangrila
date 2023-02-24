@@ -11,20 +11,11 @@ in
   config = mkIf cfg.enable {
     shangrila.apps.gui = {
       gtk = enabled;
-      picom = enabled;
-      bspwm = enabled;
-      sxhkd = enabled;
-      rofi = enabled;
-      dunst = enabled;
-      betterlockscreen = enabled;
       alacritty = enabled;
       firefox = enabled;
     };
 
     environment.systemPackages = with pkgs; [
-      xclip
-      xorg.xev
-      arandr
       vscode
       feh
       mpv
