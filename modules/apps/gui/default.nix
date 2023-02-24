@@ -10,9 +10,10 @@ in
 
   config = mkIf cfg.enable {
     shangrila.apps.gui = {
+      picom = enabled;
       bspwm = enabled;
-      alacritty = enabled;
       sxhkd = enabled;
+      alacritty = enabled;
       firefox = enabled;
     };
 
