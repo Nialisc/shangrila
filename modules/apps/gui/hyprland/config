@@ -112,6 +112,7 @@ device:epic mouse V1 {
 # Example windowrule v2
 # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+windowrulev2 = float, title:^(floating)$
 
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -121,8 +122,9 @@ $mod = SUPER
 bind = $mod, Return, exec, alacritty
 bind = $mod, F, exec, firefox
 bind = $mod, Q, killactive, 
-bind = $mod, E, exec, alacritty -e ranger
 bind = $mod, R, exec, tofi-drun --drun-launch=true
+bind = $mod, E, exec, alacritty -e ranger
+bind = $mod, K, exec, alacritty -e btop --title "floating"
 
 # Move focus with mainMod + arrow keys
 bind = $mod, left, movefocus, l
