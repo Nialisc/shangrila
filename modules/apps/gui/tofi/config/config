@@ -1,0 +1,49 @@
+# Font
+font = FiraCode Nerd Font Mono
+font-size = 11
+
+# Window Style
+horizontal = true
+anchor = top
+width = 99%
+height = 30
+margin-top = 10
+
+outline-width = 0
+border-width = 0
+min-input-width = 120
+result-spacing = 30
+padding-top = 4
+padding-bottom = 0
+padding-left = 8
+padding-right = 0
+corner-radius = 5
+
+# Text style
+prompt-text = "Run"
+prompt-padding = 30
+
+background-color = #232634
+text-color = #c6d0f5
+
+prompt-color = #e5c890
+prompt-background = #414559
+prompt-background-padding = 4, 10, 3, 10
+prompt-background-corner-radius = 5
+
+input-color = #c6d0f5
+input-background = #232634
+input-background-padding = 4, 10, 3, 10
+input-background-corner-radius = 5
+
+default-result-background = #303446
+default-result-background-padding = 4, 10, 3, 10
+default-result-background-corner-radius = 5
+
+selection-color = #e5c890
+selection-background = #414559
+selection-background-padding = 4, 10, 3, 10
+selection-background-corner-radius = 5
+selection-match-color = #fff
+
+clip-to-padding = false

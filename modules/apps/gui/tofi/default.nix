@@ -14,5 +14,12 @@ in
     };
 
     #TODO: Add config for tofi and use fontpath
+    shangrila.home.extraOptions = hm: {
+      home.file.".config/tofi" = {
+        source =
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/tofi/config";
+        recursive = true;
+      };
+    };
   };
 }
