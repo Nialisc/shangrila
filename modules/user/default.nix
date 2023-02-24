@@ -16,8 +16,8 @@ in
   };
 
   config = {
-    shangrila.home = {
-      file = {
+    shangrila.home.extraOptions = {
+      home.file = {
         "Documents/.keep".text = "";
         "Downloads/.keep".text = "";
         "Music/.keep".text = "";

@@ -15,8 +15,12 @@ in
         TERMINAL = "alacritty";
       };
     };
-    shangrila.home.configFile."alacritty/alacritty.yml" = {
-      source = ./config;
+
+    shangrila.home.extraOptions = hm: {
+      home.file.".config/alacritty/alacritty.yml" = {
+        source =
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/alacritty/config";
+      };
     };
   };
 }

@@ -36,12 +36,15 @@ in
 
     services.dbus.enable = true;
 
-    shangrila.home.configFile."hypr/hyprland.conf" = {
-      source = ./config;
-    };
-    
-    shangrila.home.file."Pictures/wallpaper.jpg" = {
-      source = ./wallpaper.jpg;
+    shangrila.home.extraOptions = hm: {
+      home.file.".config/hypr/hyprland.conf" = {
+        source =
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/hyprland/config";
+      };
+      home.file."Pictures/wallpaper.jpg" = {
+        source =
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/hyprland/wallpaper.jpg";
+      };
     };
   };
 }
