@@ -6,6 +6,8 @@ with lib;
 
   shangrila = {
     nix = enabled;
+
+    apps.gui = enabled;
   };
 
   system.stateVersion = "22.05";
