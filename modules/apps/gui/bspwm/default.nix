@@ -26,7 +26,7 @@ in
       executable = true;
     };
 
-    #TODO: See why we need it and what is launched if none
+    #TODO: See if the use of xsession could be a better way of doing it
     shangrila.home.file.".xinitrc" = {
       text = "exec bspwm";
     };

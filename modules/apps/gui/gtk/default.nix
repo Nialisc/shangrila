@@ -9,20 +9,24 @@ in
   };
 
   config = mkIf cfg.enable {
-    shangrila.home.extraOptions.gtk = {
-      enable = true;
-      theme = {
-        name = "Dracula";
-        package = pkgs.dracula-theme;
-      };
-      cursorTheme = {
-        name = "Dracula-cursors";
-        package = pkgs.dracula-theme;
-        size = 16;
-      };
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
+    environment.systemPackages = with pkgs; [ dconf lxappearance ];
+
+    shangrila.home.extraOptions = {
+      gtk = {
+        enable = true;
+        theme = {
+          name = "Dracula";
+          package = pkgs.dracula-theme;
+        };
+        cursorTheme = {
+          name = "Dracula-cursors";
+          package = pkgs.dracula-theme;
+          size = 16;
+        };
+        iconTheme = {
+          name = "Papirus-Dark";
+          package = pkgs.papirus-icon-theme;
+        };
       };
     };
   };
