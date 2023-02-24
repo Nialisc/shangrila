@@ -1,20 +1,13 @@
-{ pkgs, ... }:
+{ lib, ... }:
 
+with lib;
+with lib.internal;
 {
   imports = [ ./hardware.nix ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  users.users.example = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
+  shangrila = {
+    nix = enabled;
   };
-
-  environment.systemPackages = with pkgs; [
-    neovim
-    firefox
-  ];
 
   system.stateVersion = "22.05";
 }

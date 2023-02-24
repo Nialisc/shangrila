@@ -9,6 +9,9 @@
     kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     kernelModules = [ "kvm-intel" ];
 
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+
     initrd = {
       availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
       kernelModules = [ ];
