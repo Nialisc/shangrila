@@ -15,8 +15,8 @@ in
       gtk = {
         enable = true;
         theme = {
-          name = "Dracula";
-          package = pkgs.dracula-theme;
+          name = "Catppuccin-Frappe-Compact-Blue-Dark";
+          package = pkgs.catppuccin-gtk;
         };
         cursorTheme = {
           name = "Dracula-cursors";

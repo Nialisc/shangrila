@@ -12,6 +12,7 @@ in
     shangrila.apps.cli = {
       zsh = enabled;
       git = enabled;
+      helix = enabled;
       neovim = enabled;
       docker = enabled;
     };
@@ -23,6 +24,7 @@ in
       fzf
       ranger
       asdf-vm
+      neofetch
     ];
   };
 }
