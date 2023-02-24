@@ -26,6 +26,7 @@ in
       grim
       slurp
       wbg
+      xfce.thunar
     ];
   };
 }

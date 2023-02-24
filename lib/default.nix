@@ -5,4 +5,5 @@ rec {
     package.overrideAttrs (_: {
       inherit meta;
     });
+  mkSymlink = inputs.home-manager.file.mkOutOfStoreSymlink;
 }

@@ -1,7 +1,7 @@
 window:
   padding:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
   decorations: none
@@ -41,4 +41,4 @@ mouse:
   triple_click: { threshold: 300 }
   hints:
     launcher: firefox
-live_config_reload: false
+live_config_reload: true

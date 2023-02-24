@@ -14,6 +14,7 @@ in
     environment = {
       sessionVariables = {
         XDG_DESKTOP_DIR = "$HOME";
+        MOZ_ENABLE_WAYLAND = "1";
       };
     };
 

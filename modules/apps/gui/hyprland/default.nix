@@ -21,11 +21,20 @@ in
     shangrila.home.configFile."electron-flags.conf".source =
       ./electron-flags.conf;
 
-    environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
-
     environment.sessionVariables = {
-      MOZ_ENABLE_WAYLAND = "1";
+      NIXOS_OZONE_WL = "1";
     };
+
+    xdg = {
+      portal = {
+        enable = true;
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-gtk
+        ];
+      };
+    };
+
+    services.dbus.enable = true;
 
     shangrila.home.configFile."hypr/hyprland.conf" = {
       source = ./config;
