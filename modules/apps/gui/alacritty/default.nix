@@ -8,6 +8,12 @@ in
     enable = mkBoolOpt false "Whether or not to enable alacritty.";
   };
 
-  config =
-    mkIf cfg.enable { environment.systemPackages = with pkgs; [ alacritty ]; };
+  config = mkIf cfg.enable {
+    environment = {
+      systemPackages = with pkgs; [ alacritty ];
+      sessionVariables = {
+        TERMINAL = "alacritty";
+      };
+    };
+  };
 }

@@ -9,7 +9,12 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ sxhkd ];
+    environment = {
+      systemPackages = with pkgs; [ sxhkd ];
+      sessionVariables = {
+        SXHKD_SHELL = "/bin/sh";
+      };
+    };
     shangrila.home.configFile."sxhkd/shxkdrc".source = ./config;
   };
 }

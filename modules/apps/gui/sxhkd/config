@@ -2,7 +2,7 @@ super + shift + Escape
   bspc quit
 
 super + shift + Return
-  alacritty -e tmux
+  $TERMINAL -e tmux
 
 super + shift + l
   power_menu
@@ -20,7 +20,7 @@ super + {q,k}
   bspc node -{c,k}
 
 super + Return
-  alacritty
+  $TERMINAL
 
 super + f
   firefox

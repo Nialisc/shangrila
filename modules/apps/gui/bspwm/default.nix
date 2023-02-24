@@ -24,10 +24,5 @@ in
       source = ./config.sh;
       executable = true;
     };
-
-    shangrila.home.file."bspwm/bspwmrc" = {
-      text = "";
-      executable = true;
-    };
   };
 }

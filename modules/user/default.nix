@@ -18,7 +18,6 @@ in
   config = {
     shangrila.home = {
       file = {
-        "Desktop/.keep".text = "";
         "Documents/.keep".text = "";
         "Downloads/.keep".text = "";
         "Music/.keep".text = "";
@@ -37,7 +36,6 @@ in
       home = "/home/${cfg.name}";
       group = "users";
 
-      shell = pkgs.zsh;
       uid = 1000;
       extraGroups = [ "wheel" ] ++ cfg.extraGroups;
     } // cfg.extraOptions;
