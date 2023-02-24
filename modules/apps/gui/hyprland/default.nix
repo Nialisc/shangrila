@@ -37,9 +37,10 @@ in
     services.dbus.enable = true;
 
     shangrila.home.extraOptions = hm: {
-      home.file.".config/hypr/hyprland.conf" = {
+      home.file.".config/hypr" = {
         source =
           hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/hyprland/config";
+        recursive = true;
       };
       home.file."Pictures/wallpaper.jpg" = {
         source =
