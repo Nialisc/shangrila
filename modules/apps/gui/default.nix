@@ -15,6 +15,7 @@ in
       bspwm = enabled;
       sxhkd = enabled;
       rofi = enabled;
+      dunst = enabled;
       betterlockscreen = enabled;
       alacritty = enabled;
       firefox = enabled;
