@@ -11,6 +11,7 @@ in
   config = mkIf cfg.enable {
     shangrila.apps.wayland = {
       hyprland = enabled;
+      wofi = enabled;
     };
 
     environment.systemPackages = with pkgs; [ ];
