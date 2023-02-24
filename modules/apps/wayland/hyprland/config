@@ -160,6 +160,8 @@ bind = $mod, P, pseudo, # dwindle
 bind = $mod, J, togglesplit, # dwindle
 bind = $mod SHIFT, ESCAPE, exit, 
 
+bind = , Print, exec, grim
+bind = SHIFT, Print, exec, grim -g "$(slurp)"
 bind = , XF86MonBrightnessDown, exec, light -U  5
 bind = , XF86MonBrightnessUp, exec, light -A 5
 bind = , XF86AudioLowerVolume, exec, pactl -- set-sink-volume 0 -5%

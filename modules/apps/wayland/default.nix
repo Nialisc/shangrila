@@ -16,7 +16,9 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      light
       grim
+      slurp
       wbg
     ];
   };
