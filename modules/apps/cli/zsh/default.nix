@@ -11,6 +11,8 @@ in
   config = mkIf cfg.enable {
     shangrila.home.extraOptions = {
       home.shellAliases = {
+        ll = "ls -lsh --color";
+        lla = "ls -lsah --color";
         fonts = "fc-list | column -t -s':'";
       };
 
