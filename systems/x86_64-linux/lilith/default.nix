@@ -9,7 +9,6 @@ with lib;
     apps = {
       gui = enabled;
       cli = enabled;
-      wayland = enabled;
     };
   };
 

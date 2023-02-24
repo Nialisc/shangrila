@@ -13,12 +13,19 @@ in
       gtk = enabled;
       alacritty = enabled;
       firefox = enabled;
+      hyprland = enabled;
+      tofi = enabled;
+      mako = enabled;
     };
 
     environment.systemPackages = with pkgs; [
       vscode
       feh
       mpv
+      light
+      grim
+      slurp
+      wbg
     ];
   };
 }
