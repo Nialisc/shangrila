@@ -26,8 +26,12 @@ in
     environment.sessionVariables = {
       MOZ_ENABLE_WAYLAND = "1";
     };
+
+    shangrila.home.configFile."hypr/hyprland.conf" = {
+      source = ./config;
+    };
     
-    shangrila.home.file."~/Pictures/wallpaper.jpg" = {
+    shangrila.home.file."$HOME/Pictures/wallpaper.jpg" = {
       source = ./wallpaper.jpg;
     };
   };
