@@ -12,6 +12,7 @@ in
     shangrila.system = {
       nix = enabled;
       audio = enabled;
+      network = enabled;
     };
 
     environment.systemPackages = with pkgs; [ ntfs3g fuseiso ];
