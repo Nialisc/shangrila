@@ -13,10 +13,10 @@ in
       bspwm = enabled;
       alacritty = enabled;
       sxhkd = enabled;
+      firefox = enabled;
     };
 
     environment.systemPackages = with pkgs; [
-      firefox
       vscode
     ];
   };
