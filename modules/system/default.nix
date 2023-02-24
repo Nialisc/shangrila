@@ -9,6 +9,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    shangrila.system = {
+      nix = enabled;
+    };
+    
     environment.systemPackages = with pkgs; [ ntfs3g fuseiso ];
   };
 }

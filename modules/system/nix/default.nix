@@ -1,10 +1,10 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-let cfg = config.shangrila.nix;
+let cfg = config.shangrila.system.nix;
 in
 {
-  options.shangrila.nix = with types; {
+  options.shangrila.system.nix = with types; {
     enable = mkBoolOpt true "Whether or not to manage nix configuration.";
     package = mkOpt package pkgs.nix "Which nix package to use.";
   };
