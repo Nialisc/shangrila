@@ -14,20 +14,27 @@
 ; Widgets
 (defwidget wrapper []
   (box
-    :orientation "horizontal"
     :class "wrapper"
-    (box :orientation "horizontal" :halign "start" (children :nth 0))
-    (box :orientation "horizontal" :halign "center" (children :nth 1))
-    (box :orientation "horizontal" :halign "end" (children :nth 2))
+    (box :halign "start" (children :nth 0))
+    (box :halign "center" (children :nth 1))
+    (box :halign "end" (children :nth 2))
+  )
+)
+
+; Widgets
+(defwidget section []
+  (box
+    :class "section"
+    :spacing 15
+    (children)
   )
 )
 
 (defwidget item [label value]
   (box
-    :orientation "horizontal"
     :class "item"
-    (box :class "label" :halign "start" label)
-    (box :class "value" :halign "start" value)
+    (box :class "label" label)
+    (box :class "value" value)
   )
 )
 
@@ -46,16 +53,16 @@
   :exclusive true
   :wm-ignore false
   (wrapper
-    (box
-      (item :label "CPU" :value "${EWW_CPU.avg}%")
-      (item :label "MEM" :value "${EWW_RAM.used_mem_perc}%")
-      (item :label "CPU" :value "${EWW_BATTERY.BAT1.capacity}%")
+    (section
+      (item :label "CPU" :value "${round(EWW_CPU.avg, 0)}%")
+      (item :label "MEM" :value "${round(EWW_RAM.used_mem_perc, 0)}%")
     )
-    (box
-      (item :label "DATE" :value "${date}")
-    )
-    (box
+    (section
       (item :label "TIME" :value "${time}")
+    )
+    (section
+      (item :label "BAT" :value "${EWW_BATTERY.BAT1.capacity}%")
+      (item :label "DATE" :value "${date}")
     )
   )
 )
