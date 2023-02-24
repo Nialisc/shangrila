@@ -10,11 +10,13 @@ in
 
   config = mkIf cfg.enable {
     shangrila.apps.gui = {
+      bspwm = enabled;
       alacritty = enabled;
     };
 
     environment.systemPackages = with pkgs; [
       firefox
+      vscode
     ];
   };
 }
