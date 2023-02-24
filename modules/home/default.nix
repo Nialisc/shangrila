@@ -1,7 +1,6 @@
 { options, config, pkgs, lib, inputs, ... }:
 
 with lib;
-with lib.internal;
 let cfg = config.shangrila.home;
 in
 {

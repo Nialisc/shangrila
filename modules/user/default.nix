@@ -1,7 +1,6 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.internal;
 let cfg = config.shangrila.user;
 in
 {
@@ -28,6 +27,7 @@ in
         "Work/.keep".text = "";
         "PersonnalWork/.keep".text = "";
       };
+    };
 
     users.users.${cfg.name} = {
       isNormalUser = true;
