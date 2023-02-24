@@ -1,3 +1,10 @@
+super + Return
+  $TERMINAL
+super + f
+  firefox
+super + r
+  rofi -show drun
+
 super + shift + Escape
   bspc quit
 
@@ -19,8 +26,3 @@ super + {_,shift +}{h,l,j,k}
 super + {q,k}
   bspc node -{c,k}
 
-super + Return
-  $TERMINAL
-
-super + f
-  firefox

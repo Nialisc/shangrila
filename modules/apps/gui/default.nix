@@ -14,6 +14,7 @@ in
       picom = enabled;
       bspwm = enabled;
       sxhkd = enabled;
+      rofi = enabled;
       alacritty = enabled;
       firefox = enabled;
     };
