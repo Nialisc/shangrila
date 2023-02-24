@@ -1,14 +1,15 @@
 { options, config, pkgs, lib, inputs, ... }:
 
 with lib;
-let cfg = config.shangrila.home;
+let cfg = config.shangrila.apps;
 in
 {
   imports = with inputs; [
     home-manager.nixosModules.home-manager
   ];
 
-  options.shangrila.home = with types; {
+  options.shangrila.apps = with types; {
+    enable = mkBoolOpt false "Whether or not to enable apps managment with home-manager.";
     file = mkOpt attrs { }
       "A set of files to be managed by home-manager's <option>home.file</option>.";
     configFile = mkOpt attrs { }
@@ -16,7 +17,7 @@ in
     extraOptions = mkOpt attrs { } "Options to pass directly to home-manager.";
   };
 
-  config = {
+  config = mkIf cfg.enable {
     shangrila.home.extraOptions = {
       home.stateVersion = config.system.stateVersion;
       home.file = mkAliasDefinitions options.shangrila.home.file;
@@ -30,5 +31,8 @@ in
       users.${config.shangrila.user.name} =
         mkAliasDefinitions options.shangrila.home.extraOptions;
     };
+
+    shangrila.apps.cli = enabled;
+    shangrila.apps.gui = enabled;
   };
 }
