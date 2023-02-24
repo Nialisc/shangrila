@@ -10,6 +10,7 @@ in
 
   config = mkIf cfg.enable {
     shangrila.apps.gui = {
+      gtk = enabled;
       picom = enabled;
       bspwm = enabled;
       sxhkd = enabled;
