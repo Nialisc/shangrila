@@ -15,7 +15,7 @@ in
       gtk = {
         enable = true;
         theme = {
-          name = "Catppuccin-Frappe-Compact-Blue-Dark";
+          name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
           package = pkgs.catppuccin-gtk;
         };
         cursorTheme = {

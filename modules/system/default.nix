@@ -21,6 +21,7 @@ in
       fuseiso
       pciutils
       usbutils
+      acpi
     ];
   };
 }

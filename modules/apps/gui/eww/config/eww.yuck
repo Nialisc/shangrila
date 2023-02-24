@@ -1,0 +1,61 @@
+; Variables
+(defpoll time
+  :interval "5s"
+  :initial "--:--"
+  `date +%H:%M`
+)
+
+(defpoll date
+  :interval "1m"
+  :initial "--/--"
+  `date +%d/%m`
+)
+
+; Widgets
+(defwidget wrapper []
+  (box
+    :orientation "horizontal"
+    :class "wrapper"
+    (box :orientation "horizontal" :halign "start" (children :nth 0))
+    (box :orientation "horizontal" :halign "center" (children :nth 1))
+    (box :orientation "horizontal" :halign "end" (children :nth 2))
+  )
+)
+
+(defwidget item [label value]
+  (box
+    :orientation "horizontal"
+    :class "item"
+    (box :class "label" :halign "start" label)
+    (box :class "value" :halign "start" value)
+  )
+)
+
+; Bars
+(defwindow bar
+  :monitor 0
+  :class "bar"
+  :geometry (geometry :x "0%"
+    :y "10px"
+    :width "99%"
+    :height "30px"
+  :anchor "top center")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :exclusive true
+  :wm-ignore false
+  (wrapper
+    (box
+      (item :label "CPU" :value "${EWW_CPU.avg}%")
+      (item :label "MEM" :value "${EWW_RAM.used_mem_perc}%")
+      (item :label "CPU" :value "${EWW_BATTERY.BAT1.capacity}%")
+    )
+    (box
+      (item :label "DATE" :value "${date}")
+    )
+    (box
+      (item :label "TIME" :value "${time}")
+    )
+  )
+)
