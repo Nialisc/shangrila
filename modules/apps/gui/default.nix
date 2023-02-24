@@ -12,6 +12,7 @@ in
     shangrila.apps.gui = {
       bspwm = enabled;
       alacritty = enabled;
+      sxhkd = enabled;
     };
 
     environment.systemPackages = with pkgs; [

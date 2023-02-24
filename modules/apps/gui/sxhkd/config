@@ -1,0 +1,26 @@
+super + shift + Escape
+  bspc quit
+
+super + shift + Return
+  alacritty -e tmux
+
+super + shift + l
+  power_menu
+
+super + shift + r
+  bspc wm -r && killall sxhkd && sxhkd &
+
+super + {_,shift +} {1-9,0}
+  bspc {desktop -f,node -d} '{1-9,10}'
+
+super + {_,shift +}{h,l,j,k}
+  bspc node -{f,s} {west,east,north,south}
+
+super + {q,k}
+  bspc node -{c,k}
+
+super + Return
+  alacritty
+
+super + f
+  firefox

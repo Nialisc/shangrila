@@ -5,3 +5,6 @@ bspc config borderless_monocle       true
 bspc config gapless_monocle          true
 bspc config single_monocle           true
 bspc config window_gap               0
+
+# Autostart
+sxhkd &

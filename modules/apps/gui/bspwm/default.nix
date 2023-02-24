@@ -19,6 +19,9 @@ in
         defaultSession = "none+bspwm";
       };
     };
-    shangrila.home.configFile."bspwm/bspwmrc".source = ./config.sh;
+    shangrila.home.configFile."bspwm/bspwmrc" = {
+      source = ./config.sh;
+      executable = true;
+    };
   };
 }
