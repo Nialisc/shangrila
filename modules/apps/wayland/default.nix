@@ -12,6 +12,7 @@ in
     shangrila.apps.wayland = {
       hyprland = enabled;
       tofi = enabled;
+      mako = enabled;
     };
 
     environment.systemPackages = with pkgs; [
