@@ -17,6 +17,15 @@ in
       };
       nvidiaPatches = false;
     };
+
+    shangrila.home.configFile."electron-flags.conf".source =
+      ./electron-flags.conf;
+
+    environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
+
+    environment.sessionVariables = {
+      MOZ_ENABLE_WAYLAND = "1";
+    };
     
     shangrila.home.file."~/Pictures/wallpaper.jpg" = {
       source = ./wallpaper.jpg;
