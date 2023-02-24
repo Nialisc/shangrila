@@ -2,9 +2,10 @@
     "window.menuBarVisibility": "toggle",
     "workbench.activityBar.visible": false,
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDragAndDrop": true,
-    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     "editor.fontWeight": "normal",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "FiraCode Nerd Font Mono"
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "workbench.colorTheme": "Catppuccin Frappé"
 }

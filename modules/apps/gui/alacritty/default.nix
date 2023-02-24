@@ -17,9 +17,10 @@ in
     };
 
     shangrila.home.extraOptions = hm: {
-      home.file.".config/alacritty/alacritty.yml" = {
+      home.file.".config/alacritty" = {
         source =
           hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/alacritty/config";
+        recursive = true;
       };
     };
   };

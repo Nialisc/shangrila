@@ -1,3 +1,6 @@
+import:
+  - ~/.config/alacritty/catppuccin-frappe.yml
+
 window:
   padding:
     x: 10
