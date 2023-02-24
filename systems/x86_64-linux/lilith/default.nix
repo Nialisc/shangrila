@@ -9,6 +9,8 @@ with lib;
 
     apps.gui = enabled;
     apps.cli = enabled;
+
+    system = enabled;
   };
 
   system.stateVersion = "22.05";
