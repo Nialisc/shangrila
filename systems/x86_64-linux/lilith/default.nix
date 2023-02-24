@@ -8,6 +8,7 @@ with lib;
     nix = enabled;
 
     apps.gui = enabled;
+    apps.cli = enabled;
   };
 
   system.stateVersion = "22.05";
