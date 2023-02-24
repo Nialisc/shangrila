@@ -12,15 +12,19 @@ in
     environment.systemPackages = with pkgs; [ bspwm ];
     services.xserver = {
       enable = true;
+      autorun = false;
       layout = "us";
       xkbVariant = "euro";
-      windowManager.bspwm.enable = true;
-      displayManager = { 
-        defaultSession = "none+bspwm";
-      };
+      displayManager.startx = enabled;
+      windowManager.bspwm = enabled;
     };
     shangrila.home.configFile."bspwm/bspwmrc" = {
       source = ./config.sh;
+      executable = true;
+    };
+
+    shangrila.home.file."bspwm/bspwmrc" = {
+      text = "";
       executable = true;
     };
   };
