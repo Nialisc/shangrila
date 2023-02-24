@@ -1,7 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.gui.firefox;
+let 
+  cfg = config.shangrila.apps.gui.firefox;
+  waylandCfg = config.shangrila.apps.walyand;
 in
 {
   options.shangrila.apps.gui.firefox = with types; {
@@ -18,6 +20,8 @@ in
     shangrila.home.extraOptions = {
       programs.firefox = {
         enable = true;
+
+        package = pkgs.firefox-wayland;
 
         profiles.${config.shangrila.user.name} = {
           id = 0;
