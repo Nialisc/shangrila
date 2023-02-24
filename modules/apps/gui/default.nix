@@ -18,7 +18,12 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      xclip
+      xorg.xev
+      arandr
       vscode
+      feh
+      mpv
     ];
   };
 }

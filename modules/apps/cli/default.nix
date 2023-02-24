@@ -13,6 +13,9 @@ in
       git = enabled;
     };
 
-    environment.systemPackages = with pkgs; [ ];
+    environment.systemPackages = with pkgs; [
+      killall
+      wget
+    ];
   };
 }

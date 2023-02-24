@@ -16,6 +16,11 @@ in
       locale = enabled;
     };
 
-    environment.systemPackages = with pkgs; [ ntfs3g fuseiso ];
+    environment.systemPackages = with pkgs; [
+      ntfs3g
+      fuseiso
+      pciutils
+      usbutils
+    ];
   };
 }
