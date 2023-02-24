@@ -1,0 +1,10 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": true,
+    "explorer.confirmDelete": true,
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "FiraCode Nerd Font Mono"
+}

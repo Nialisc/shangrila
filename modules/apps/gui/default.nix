@@ -16,10 +16,10 @@ in
       hyprland = enabled;
       tofi = enabled;
       mako = enabled;
+      vscode = enabled;
     };
 
     environment.systemPackages = with pkgs; [
-      vscode
       feh
       mpv
       light

@@ -11,12 +11,7 @@ in
   config = mkIf cfg.enable {
     shangrila.home.extraOptions = {
       home.shellAliases = {
-        ll = "${pkgs.colorls}/bin/colorls --sd";
-        lcg = "lc --gs";
-        lcl = "lc -1";
-        lclg = "lc -1 --gs";
-        lcu = "${pkgs.colorls}/bin/colorls -U";
-        lclu = "${pkgs.colorls}/bin/colorls -U -1";
+        fonts = "fc-list | grep -i 'fira' | column -t -s':'"
       };
 
       programs = {
