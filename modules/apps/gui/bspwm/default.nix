@@ -22,10 +22,10 @@ in
       windowManager.bspwm = enabled;
     };
     shangrila.home.configFile."bspwm/bspwmrc" = {
-      source = ./config.sh;
+      source = ./config;
       executable = true;
     };
-    
+
     #TODO: See why we need it and what is launched if none
     shangrila.home.file.".xinitrc" = {
       text = "exec bspwm";
