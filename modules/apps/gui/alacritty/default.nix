@@ -15,5 +15,8 @@ in
         TERMINAL = "alacritty";
       };
     };
+    shangrila.home.configFile."alacritty/alacritty.yml" = {
+      source = ./config;
+    };
   };
 }

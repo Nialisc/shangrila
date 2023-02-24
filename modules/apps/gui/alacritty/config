@@ -1,0 +1,44 @@
+window:
+  padding:
+    x: 0
+    y: 0
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+  decorations: none
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  bold:
+    style: Bold
+  italic:
+    style: Italic
+  size: 12.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+debug:
+    render_timer: false
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+bell:
+  animation: EaseOutExpo
+  duration: 0
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hints:
+    launcher: firefox
+live_config_reload: false

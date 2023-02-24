@@ -21,5 +21,8 @@ in
       font = "Lat2-Terminus16";
       keyMap = "us";
     };
+    fonts.fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    ];
   };
 }
