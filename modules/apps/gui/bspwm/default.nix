@@ -30,5 +30,8 @@ in
     shangrila.home.file.".xinitrc" = {
       text = "exec bspwm";
     };
+    shangrila.home.file."~/Pictures/wallpaper.jpg" = {
+      source = ./wallpaper.jpg;
+    };
   };
 }

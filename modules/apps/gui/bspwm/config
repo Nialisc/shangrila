@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x picom > /dev/null || picom &
+feh --no-fehbg --bg-scale '/home/nialis/Pictures/wallpaper.jpg'
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
 
