@@ -10,6 +10,7 @@ in
 
   config = mkIf cfg.enable {
     shangrila.apps.cli = {
+      zsh = enabled;
       git = enabled;
       neovim = enabled;
       docker = enabled;
