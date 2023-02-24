@@ -21,6 +21,7 @@ in
       btop
       fzf
       ranger
+      asdf-vm
     ];
   };
 }
