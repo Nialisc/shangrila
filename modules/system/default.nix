@@ -22,6 +22,7 @@ in
       pciutils
       usbutils
       acpi
+      gcc
     ];
   };
 }

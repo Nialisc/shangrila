@@ -1,5 +1,5 @@
 # Font
-font = FiraCode Nerd Font Mono
+font = FiraCode Nerd Font
 font-size = 11
 
 # Window Style
@@ -20,7 +20,7 @@ padding-right = 0
 corner-radius = 5
 
 # Text style
-prompt-text = "Run"
+prompt-text = ""
 prompt-padding = 30
 
 background-color = #232634

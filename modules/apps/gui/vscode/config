@@ -6,6 +6,6 @@
     "explorer.confirmDelete": false,
     "editor.fontWeight": "normal",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "workbench.colorTheme": "Catppuccin Frappé"
 }

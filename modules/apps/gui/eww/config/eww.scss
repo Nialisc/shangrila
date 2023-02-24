@@ -1,16 +1,13 @@
 .bar {
-  font: 14px "FiraCode Nerd Font Mono";
+  font: 14px "FiraCode Nerd Font";
   font-weight: bold;
   background-color: #232634;
   color: #c6d0f5;
   border-radius: 5px;
-}
 
-.zen_bar {
-  font: 14px "FiraCode Nerd Font Mono";
-  font-weight: bold;
-  background-color: #232634;
-  color: #c6d0f5;
+  &.zen {
+    border-radius: 0;
+  }
 }
 
 .wrapper {
@@ -26,6 +23,24 @@
   padding: 0;
   background-color: #414559;
   border-radius: 5px 0 0 5px;
+  font: 15px "FiraCode Nerd Font";
+  color: #232634;
+
+  &.battery {
+    background-color: #a6d189;
+  }
+  &.date {
+    background-color: #85c1dc;
+  }
+  &.time {
+    background-color: #e5c890;
+  }
+  &.memory {
+    background-color: #8caaee;
+  }
+  &.cpu {
+    background-color: #ca9ee6;
+  }
 }
 
 .value {

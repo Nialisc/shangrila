@@ -30,26 +30,26 @@
   )
 )
 
-(defwidget item [label value]
+(defwidget item [name label value]
   (box
-    :class "item"
-    (box :class "label" label)
-    (box :class "value" value)
+    :class "item ${name}"
+    (box :class "label ${name}" label)
+    (box :class "value ${name}" value)
   )
 )
 
 (defwidget content []
   (wrapper
     (section
-      (item :label "CPU" :value "${round(EWW_CPU.avg, 0)}%")
-      (item :label "MEM" :value "${round(EWW_RAM.used_mem_perc, 0)}%")
+      (item :name "cpu" :label "" :value "${round(EWW_CPU.avg, 0)}%")
+      (item :name "memory" :label "" :value "${round(EWW_RAM.used_mem_perc, 0)}%")
     )
     (section
-      (item :label "TIME" :value "${time}")
+      (item :name "time" :label "" :value "${time}")
     )
     (section
-      (item :label "BAT" :value "${EWW_BATTERY.BAT1.capacity}%")
-      (item :label "DATE" :value "${date}")
+      (item :name "battery" :label "" :value "${EWW_BATTERY.BAT1.capacity}%")
+      (item :name "date" :label "" :value "${date}")
     )
   )
 )
@@ -73,7 +73,7 @@
 
 (defwindow zen_bar
   :monitor 0
-  :class "zen_bar"
+  :class "bar zen"
   :geometry (geometry :x "0%"
     :y "0%"
     :width "100%"
