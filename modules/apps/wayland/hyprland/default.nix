@@ -31,7 +31,7 @@ in
       source = ./config;
     };
     
-    shangrila.home.file."$HOME/Pictures/wallpaper.jpg" = {
+    shangrila.home.file."Pictures/wallpaper.jpg" = {
       source = ./wallpaper.jpg;
     };
   };

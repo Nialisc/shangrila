@@ -19,6 +19,7 @@ in
       wget
       btop
       fzf
+      ranger
     ];
   };
 }
