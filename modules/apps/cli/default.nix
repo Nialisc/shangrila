@@ -12,6 +12,7 @@ in
     shangrila.apps.cli = {
       git = enabled;
       neovim = enabled;
+      docker = enabled;
     };
 
     environment.systemPackages = with pkgs; [
