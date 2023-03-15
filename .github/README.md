@@ -19,16 +19,15 @@
 <br>
 <br>
 
-> Disclaimer:
-> This configuration is heavely inpired by the awesome work of [Jake Hamilton](https://github.com/jakehamilton), thanks for all you efforts
+> Disclaimer: This configuration is inpired by the awesome work of [Jake Hamilton](https://github.com/jakehamilton), thanks for all your efforts
 
 Details in comming ...
 
 ## Roadmap
-- [] better logo
-- [] Iter nerd font
-- [] finish eww bar
-- [] zen mode
-- [] neovim config
-- [] mako config
-- [] better readme
+- [ ] better logo
+- [ ] Iter nerd font
+- [ ] finish eww bar
+- [ ] zen mode
+- [ ] neovim config
+- [ ] mako config
+- [ ] better readme
