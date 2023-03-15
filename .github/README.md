@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://raw.githubusercontent.com/nialisc/shangrila/main/assets/logo.png" alt="logo" width="200">
+  <img src="https://raw.githubusercontent.com/nialisc/shangrila/main/assets/logo.png" alt="logo" width="400">
   <br>
   ShangriLa
   <br>
