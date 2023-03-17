@@ -11,22 +11,21 @@ in
   config = mkIf cfg.enable {
     shangrila.apps.gui = {
       gtk = enabled;
+      eww = enabled;
+      bspwm = enabled;
+      nvidia = enabled;
+      picom = enabled;
+      rofi = enabled;
+      sxhkd = enabled;
       alacritty = enabled;
       firefox = enabled;
-      hyprland = enabled;
-      tofi = enabled;
-      mako = enabled;
       vscode = enabled;
-      eww = enabled;
     };
 
     environment.systemPackages = with pkgs; [
       feh
       mpv
       light
-      grim
-      slurp
-      wbg
       xfce.thunar
     ];
   };

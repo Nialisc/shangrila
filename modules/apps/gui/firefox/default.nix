@@ -3,7 +3,6 @@
 with lib;
 let 
   cfg = config.shangrila.apps.gui.firefox;
-  waylandCfg = config.shangrila.apps.walyand;
 in
 {
   options.shangrila.apps.gui.firefox = with types; {
@@ -14,15 +13,12 @@ in
     environment = {
       sessionVariables = {
         XDG_DESKTOP_DIR = "$HOME";
-        MOZ_ENABLE_WAYLAND = "1";
       };
     };
 
     shangrila.home.extraOptions = {
       programs.firefox = {
         enable = true;
-
-        package = pkgs.firefox-wayland;
 
         profiles.${config.shangrila.user.name} = {
           id = 0;

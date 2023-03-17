@@ -10,7 +10,7 @@ in
 
   config = mkIf cfg.enable {
     environment = {
-      systemPackages = with pkgs; [ eww-wayland ];
+      systemPackages = with pkgs; [ eww ];
     };
 
     shangrila.home.extraOptions = hm: {
