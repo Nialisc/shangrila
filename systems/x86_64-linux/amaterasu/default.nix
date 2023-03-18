@@ -7,8 +7,11 @@ with lib;
   shangrila = {
     system = enabled;
     apps = {
-      gui = enabled;
       cli = enabled;
+      gui = gui = {
+        enable = true;
+        nvidia = true;
+      };
     };
   };
 

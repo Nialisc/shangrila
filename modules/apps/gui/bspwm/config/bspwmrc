@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --no-fehbg --bg-scale $HOME/Pictures/wallpaper.jpg
+feh --bg-scale $HOME/Pictures/wallpaper.jpg
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x eww > /dev/null || eww daemon && eww open bar &
 
