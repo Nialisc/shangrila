@@ -1,13 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.gui.eww;
+let cfg = config.shangrila.apps.gui;
 in
 {
-  options.shangrila.apps.gui.eww = with types; {
-    enable = mkBoolOpt false "Whether or not to enable eww.";
-  };
-
   config = mkIf cfg.enable {
     environment = {
       systemPackages = with pkgs; [ eww ];

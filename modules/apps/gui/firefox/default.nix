@@ -2,13 +2,9 @@
 
 with lib;
 let 
-  cfg = config.shangrila.apps.gui.firefox;
+  cfg = config.shangrila.apps.gui;
 in
 {
-  options.shangrila.apps.gui.firefox = with types; {
-    enable = mkBoolOpt false "Whether or not to enable firefox.";
-  };
-
   config = mkIf cfg.enable {
     environment = {
       sessionVariables = {

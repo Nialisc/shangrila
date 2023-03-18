@@ -1,11 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-let cfg = config.shangrila.system.nix;
+let 
+  cfg = config.shangrila.system;
+  customCfg = config.shangrila.system.nix;
 in
 {
   options.shangrila.system.nix = with types; {
-    enable = mkBoolOpt true "Whether or not to manage nix configuration.";
     package = mkOpt package pkgs.nix "Which nix package to use.";
   };
 
@@ -14,7 +15,7 @@ in
       let users = [ "root" config.shangrila.user.name ];
       in
       {
-        package = cfg.package;
+        package = customCfg.package;
         extraOptions = lib.concatStringsSep "\n" [
           ''
             experimental-features = nix-command flakes

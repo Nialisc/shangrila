@@ -1,13 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.system.audio;
+let cfg = config.shangrila.system;
 in
 {
-  options.shangrila.system.audio = with types; {
-    enable = mkBoolOpt false "Whether or not to enable audio managment.";
-  };
-
   config = mkIf cfg.enable {
     sound = {
       enable = true;

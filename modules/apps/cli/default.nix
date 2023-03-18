@@ -9,14 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    shangrila.apps.cli = {
-      zsh = enabled;
-      git = enabled;
-      helix = enabled;
-      neovim = enabled;
-      docker = enabled;
-    };
-
     environment.systemPackages = with pkgs; [
       killall
       wget

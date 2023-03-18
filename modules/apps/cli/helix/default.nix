@@ -1,13 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.cli.helix;
+let cfg = config.shangrila.apps.cli;
 in
 {
-  options.shangrila.apps.cli.helix = with types; {
-    enable = mkBoolOpt false "Whether or not to enable helix.";
-  };
-
   config =
     mkIf cfg.enable {
       environment = {

@@ -1,13 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.system.locale;
+let cfg = config.shangrila.system;
 in
 {
-  options.shangrila.system.locale = with types; {
-    enable = mkBoolOpt false "Whether or not to enable locale managment.";
-  };
-
   config = mkIf cfg.enable {
     time.timeZone = "Europe/Paris";
     i18n = {

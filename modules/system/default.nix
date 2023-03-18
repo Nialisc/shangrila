@@ -9,13 +9,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    shangrila.system = {
-      nix = enabled;
-      audio = enabled;
-      network = enabled;
-      locale = enabled;
-    };
-
     environment.systemPackages = with pkgs; [
       ntfs3g
       fuseiso

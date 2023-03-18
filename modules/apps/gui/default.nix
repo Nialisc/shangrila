@@ -11,17 +11,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    shangrila.apps.gui = {
-      gtk = enabled;
-      eww = enabled;
-      bspwm = enabled;
-      rofi = enabled;
-      sxhkd = enabled;
-      alacritty = enabled;
-      firefox = enabled;
-      vscode = enabled;
-    };
-
     services = mkIf cfg.nvidia {
       xserver.videoDrivers = [ "nvidia" ];
     };

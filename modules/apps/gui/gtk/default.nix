@@ -1,13 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.gui.gtk;
+let cfg = config.shangrila.apps.gui;
 in
 {
-  options.shangrila.apps.gui.gtk = with types; {
-    enable = mkBoolOpt false "Whether or not to enable gtk managment.";
-  };
-
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ dconf lxappearance ];
 

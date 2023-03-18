@@ -2,14 +2,9 @@
 
 with lib;
 let 
-  cfg = config.shangrila.apps.gui.bspwm;
-  guiCfg = config.shangrila.apps.gui;
+  cfg = config.shangrila.apps.gui;
 in
 {
-  options.shangrila.apps.gui.bspwm = with types; {
-    enable = mkBoolOpt false "Whether or not to enable bspwm.";
-  };
-
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ bspwm ];
     services.xserver = {
@@ -37,7 +32,7 @@ in
       #TODO: See if the use of xsession could be a better way of doing it
       home.file.".xinitrc" = {
         text = ''
-        ${guiCfg.XtraConfig}
+        ${cfg.XtraConfig}
         exec bspwm
         '';
       };
