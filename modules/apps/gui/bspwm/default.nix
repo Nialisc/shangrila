@@ -1,7 +1,9 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-let cfg = config.shangrila.apps.gui.bspwm;
+let 
+  cfg = config.shangrila.apps.gui.bspwm;
+  guiCfg = config.shangrila.apps.gui;
 in
 {
   options.shangrila.apps.gui.bspwm = with types; {
@@ -34,7 +36,10 @@ in
       };
       #TODO: See if the use of xsession could be a better way of doing it
       home.file.".xinitrc" = {
-        text = "exec bspwm";
+        text = ''
+        ${guiCfg.XtraConfig}
+        exec bspwm
+        '';
       };
     };
 
