@@ -37,6 +37,7 @@ in
         mpv
         light
         xfce.thunar
+        chromium
       ];
     };
   };

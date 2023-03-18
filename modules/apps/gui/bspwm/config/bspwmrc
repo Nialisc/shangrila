@@ -1,11 +1,24 @@
 #!/bin/sh
 
+# Autostart
 feh --bg-scale $HOME/Pictures/wallpaper.jpg
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x eww > /dev/null || eww daemon && eww open bar &
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10 11 12
+# Monitors
+MONITORS=$(bspc query -M --names)
+length=$(echo $MONITORS | wc -w)
+if [ $length -gt "1" ]
+then
+  first=$(echo $MONITORS | cut -d " " -f 1)
+  second=$(echo $MONITORS | cut -d " " -f 2)
+  bspc monitor $first -d 1 2 3 4 5
+  bspc monitor $second -d 6 7 8 9 10
+else
+  bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+fi
 
+# Config
 bspc config focus_follows_pointer    true
 bspc config borderless_monocle       true
 bspc config gapless_monocle          true
