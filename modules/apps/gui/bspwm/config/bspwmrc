@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Autostart
-feh --bg-scale $HOME/Pictures/wallpaper.jpg
+betterlockscreen -l &
+feh --bg-scale $HOME/Pictures/wallpaper.jpg &
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x dunst > /dev/null || dunst &
 pgrep -x eww > /dev/null || eww daemon && eww open bar &

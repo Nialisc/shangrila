@@ -32,8 +32,9 @@ in
           enableSyntaxHighlighting = true;
 
           initExtra = ''
-            set -o vi
-            source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+            if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+              startx
+            fi
           '';
 
           plugins = [];

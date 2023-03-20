@@ -20,6 +20,7 @@ in
         windowManager.bspwm = enabled;
       };
       dbus = enabled;
+      getty.autologinUser = config.shangrila.user.name;
     };
 
     shangrila.home.extraOptions = hm: {
