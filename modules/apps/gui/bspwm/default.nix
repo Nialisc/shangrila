@@ -7,16 +7,19 @@ in
 {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ bspwm ];
-    services.xserver = {
-      enable = true;
-      autorun = false;
-      layout = "us";
-      xkbVariant = "euro";
-      xkbOptions = "eurosign:e";
-      libinput = enabled;
-      displayManager.startx = enabled;
-      displayManager.defaultSession = "none+bspwm";
-      windowManager.bspwm = enabled;
+    services = {
+      xserver = {
+        enable = true;
+        autorun = false;
+        layout = "us";
+        xkbVariant = "euro";
+        xkbOptions = "eurosign:e";
+        libinput = enabled;
+        displayManager.startx = enabled;
+        displayManager.defaultSession = "none+bspwm";
+        windowManager.bspwm = enabled;
+      };
+      dbus = enabled;
     };
 
     shangrila.home.extraOptions = hm: {
@@ -33,7 +36,7 @@ in
       home.file.".xinitrc" = {
         text = ''
         ${cfg.XtraConfig}
-        exec bspwm
+        exec dbus-launch --exit-with-x11 bspwm
         '';
       };
     };
