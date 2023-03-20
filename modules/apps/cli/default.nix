@@ -17,6 +17,7 @@ in
       ranger
       asdf-vm
       neofetch
+      lazygit
     ];
   };
 }
