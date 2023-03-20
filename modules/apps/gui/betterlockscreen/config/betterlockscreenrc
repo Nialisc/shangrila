@@ -1,0 +1,35 @@
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=()
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+solid_color=333333
+wallpaper_cmd="feh --bg-fill"
+quiet=true
+
+# default theme
+loginbox=303446
+loginshadow=000000
+locktext="Welcome back, BG"
+font="FiraCode Nerd Font"
+ringcolor=414559
+insidecolor=838ba7
+separatorcolor=838ba7
+ringvercolor=626880
+insidevercolor=838ba7
+ringwrongcolor=838ba7
+insidewrongcolor=838ba7
+timecolor=c6d0f5
+time_format="%H:%M"
+greetercolor=c6d0f5
+layoutcolor=c6d0f5
+keyhlcolor=c6d0f5
+bshlcolor=c6d0f5
+veriftext="Verifying"
+verifcolor=e5c890
+wrongtext="Wrong"
+wrongcolor=e78284
+modifcolor=838ba7
+bgcolor=303446
