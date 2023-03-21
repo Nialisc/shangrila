@@ -17,7 +17,7 @@ in
       shangrila.home.extraOptions = hm: {
         home.file.".config/helix" = {
           source =
-            hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/cli/helix/config";
+            hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/cli/helix/config";
           recursive = true;
         };
       };

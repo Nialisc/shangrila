@@ -12,7 +12,7 @@ in
     shangrila.home.extraOptions = hm: {
       home.file.".config/betterlockscreenrc" = {
       source =
-        hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/betterlockscreen/config/betterlockscreenrc";
+        hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/gui/betterlockscreen/config/betterlockscreenrc";
       };
     };
   };

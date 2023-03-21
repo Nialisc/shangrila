@@ -15,7 +15,7 @@ in
     shangrila.home.extraOptions = hm: {
       home.file.".config/sxhkd" = {
         source =
-          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/sxhkd/config";
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/gui/sxhkd/config";
         recursive = true;
       };
     };

@@ -24,10 +24,8 @@
 Details in comming ...
 
 ## Roadmap
-- [ ] better logo
-- [ ] Iter nerd font
-- [ ] finish eww bar
-- [ ] zen mode
-- [ ] neovim config
-- [ ] mako config
-- [ ] better readme
+- [ ] Inter nerd font
+- [ ] Finish eww bar
+- [ ] Neovim config
+- [ ] Dunst config
+- [ ] Better readme

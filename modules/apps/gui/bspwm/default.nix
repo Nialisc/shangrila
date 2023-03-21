@@ -26,12 +26,12 @@ in
     shangrila.home.extraOptions = hm: {
       home.file.".config/bspwm" = {
         source =
-          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/bspwm/config";
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/gui/bspwm/config";
         recursive = true;
       };
       home.file."Pictures/wallpaper.jpg" = {
         source =
-          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/bspwm/wallpaper.jpg";
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/gui/bspwm/wallpaper.jpg";
       };
       #TODO: See if the use of xsession could be a better way of doing it
       home.file.".xinitrc" = {

@@ -12,7 +12,7 @@ in
     shangrila.home.extraOptions = hm: {
       home.file.".config/eww" = {
         source =
-          hm.config.lib.file.mkOutOfStoreSymlink "/home/nialis/.nix/modules/apps/gui/eww/config";
+          hm.config.lib.file.mkOutOfStoreSymlink "/home/${config.shangrila.user.name}/.nix/modules/apps/gui/eww/config";
         recursive = true;
       };
     };
