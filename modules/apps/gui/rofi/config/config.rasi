@@ -1,0 +1,167 @@
+configuration {
+  display-drun: "Applications";
+  display-windows: "Windowws";
+  drun-display-format: "{icon} {name}";
+  show-icons: true;
+  icons-theme: "Papirus";
+  font: "FiraCode Nerd Font 11";
+}
+
+* {
+  red:                         #e78284;
+  blue:                        #8caaee;
+  green:                       #a6d189;
+  lightfg:                     #303446;
+  lightbg:                     #303446;
+  lighterbg:                   #414559;
+  background:                  #232634;
+  foreground:                  #c6d0f5;
+
+  border-color:                var(background);
+  separatorcolor:              var(background);
+  urgent-foreground:           var(red);
+  normal-background:           var(background);
+  urgent-background:           var(background);
+  active-foreground:           var(blue);
+  active-background:           var(background);
+  normal-foreground:           var(foreground);
+
+  selected-active-foreground:  var(foreground);
+  selected-urgent-background:  var(red);
+  selected-normal-foreground:  var(foreground);
+  selected-active-background:  var(blue);
+  selected-normal-background:  var(lighterbg);
+  selected-urgent-foreground:  var(foreground);
+  alternate-urgent-background: var(background);
+  alternate-active-background: var(background);
+  alternate-normal-foreground: var(foreground);
+  alternate-normal-background: var(background);
+  alternate-urgent-foreground: var(red);
+  alternate-active-foreground: var(blue);
+  
+  background-color:            transparent;
+  spacing:                     2;
+}
+
+element {
+  padding: 1px ;
+  cursor:  pointer;
+  spacing: 5px ;
+  border:  0;
+}
+element normal.normal {
+  background-color: var(normal-background);
+  text-color:       var(normal-foreground);
+}
+element normal.urgent {
+  background-color: var(urgent-background);
+  text-color:       var(urgent-foreground);
+}
+element normal.active {
+  background-color: var(active-background);
+  text-color:       var(active-foreground);
+}
+element selected.normal {
+  background-color: var(selected-normal-background);
+  text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+  background-color: var(selected-urgent-background);
+  text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+  background-color: var(selected-active-background);
+  text-color:       var(selected-active-foreground);
+}
+element alternate.normal {
+  background-color: var(alternate-normal-background);
+  text-color:       var(alternate-normal-foreground);
+}
+element alternate.urgent {
+  background-color: var(alternate-urgent-background);
+  text-color:       var(alternate-urgent-foreground);
+}
+element alternate.active {
+  background-color: var(alternate-active-background);
+  text-color:       var(alternate-active-foreground);
+}
+element-text {
+  background-color: transparent;
+  cursor:           inherit;
+  highlight:        inherit;
+  text-color:       inherit;
+}
+element-icon {
+  background-color: transparent;
+  size:             1.0000em ;
+  cursor:           inherit;
+  text-color:       inherit;
+}
+window {
+  padding:          5;
+  background-color: var(background);
+  border:           1;
+}
+mainbox {
+  padding: 0;
+  border:  0;
+}
+message {
+  padding:      1px ;
+  border-color: var(separatorcolor);
+  border:       2px dash 0px 0px ;
+}
+textbox {
+  text-color: var(foreground);
+}
+listview {
+  padding:      2px 0px 0px ;
+  scrollbar:    true;
+  border-color: var(separatorcolor);
+  spacing:      2px ;
+  fixed-height: 0;
+  border:       2px dash 0px 0px ;
+}
+scrollbar {
+  width:        2px ;
+  padding:      0;
+  handle-width: 4px ;
+  border:       0;
+  handle-color: var(normal-foreground);
+}
+sidebar {
+  border-color: var(separatorcolor);
+  border:       2px dash 0px 0px ;
+}
+button {
+  cursor:     pointer;
+  spacing:    0;
+  text-color: var(normal-foreground);
+}
+button selected {
+  background-color: var(selected-normal-background);
+  text-color:       var(selected-normal-foreground);
+}
+inputbar {
+  padding:    1px ;
+  spacing:    0px ;
+  text-color: var(normal-foreground);
+  children:   [ "prompt","entry" ];
+}
+entry {
+  text-color:        var(foreground);
+  background-color:  var(lightbg);
+  cursor:            text;
+  spacing:           0;
+  placeholder-color: var(foreground);
+  placeholder:       "Type to search";
+  padding:           4px 8px;
+  border-radius:     0 5px 5px 0;
+}
+prompt {
+  spacing:          0;
+  text-color:       var(background);
+  background-color: var(green);
+  padding:          4px 8px;
+  border-radius:    5px 0 0 5px;
+}
