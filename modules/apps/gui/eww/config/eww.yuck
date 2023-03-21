@@ -57,7 +57,7 @@
 ; Bars
 (defwindow bar
   :monitor 0
-  :class "bar"
+  :class "bar" 
   :geometry (geometry :x "0%"
     :y "0%"
     :width "100%"
