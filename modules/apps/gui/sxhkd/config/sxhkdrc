@@ -18,11 +18,18 @@ XF86AudioMute
 XF86AudioMicMute
   pactl set-source-mute 1 toggle
 
-super + shift + Escape
-  bspc quit
 super + {_,shift +} {1-9,0}
   bspc {desktop -f,node -d} '{1-9,10}'
 super + {_,shift +}{h,l,j,k}
   bspc node -{f,s} {west,east,north,south}
+super + {_,shift +} Tab
+  bspc node -f {next,prev}.local
 super + {q,k}
   bspc node -{c,k}
+super + m
+  bspc desktop -l next
+
+super + shift + Escape
+  bspc quit
+super + shift + r
+  killall sxhkd && sxhkd
