@@ -6,6 +6,7 @@
 betterlockscreen -l &
 test -f "$HOME/.fehbg" && sh "$HOME/.fehbg" &
 pgrep -x eww > /dev/null || eww daemon && eww open bar &
+pgrep -x picom > /dev/null || picom &
 
 hc() {
     herbstclient "$@"
