@@ -23,7 +23,7 @@
 
 ; Widgets
 (defwidget section []
-  (box
+  (box :space-evenly false
     :class "section"
     :spacing 15
     (children)
@@ -31,7 +31,7 @@
 )
 
 (defwidget item [name label value]
-  (box
+  (box :space-evenly false
     :class "item ${name}"
     (box :class "label ${name}" label)
     (box :class "value ${name}" value)
