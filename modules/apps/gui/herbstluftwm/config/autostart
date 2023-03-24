@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
 
 # this is a simple config for herbstluftwm
-
-# Apps
-if hc silent new_attr bool first_start ; then
-    betterlockscreen -l &
-    test -f "$HOME/.fehbg" && sh "$HOME/.fehbg" &
-fi
-pgrep -x eww > /dev/null || eww daemon && eww open bar &
-pgrep -x picom > /dev/null || picom &
-
 hc() {
     herbstclient "$@"
 }
 
-SCRIPTS=$HOME/.config/herbstluftwm/scripts
+# Apps
+if hc silent new_attr bool my_first_start ; then
+    betterlockscreen -l &
+    test -f "$HOME/.fehbg" && sh "$HOME/.fehbg" &
+    eww daemon && eww open bar &
+    picom &
+    dunst &
+fi
 
+hc set default_frame_layout horizontal
 hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
@@ -32,7 +31,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-q close
 
 hc keybind $Mod-Return spawn $TERMINAL
-hc keybind $Mod-space spawn rofi -show drun
+hc keybind $Mod-r spawn rofi -show drun
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -114,22 +113,21 @@ hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
-hc keybind $Mod-r remove
+hc keybind $Mod-Control-r remove
 # hc keybind $Mod-s floating toggle
 hc keybind $Mod-Shift-f fullscreen toggle
 hc keybind $Mod-f set_attr clients.focus.floating toggle
 hc keybind $Mod-Shift-d set_attr clients.focus.decorated toggle
 hc keybind $Mod-Shift-m set_attr clients.focus.minimized true
 hc keybind $Mod-Control-m jumpto last-minimized
-hc keybind $Mod-m spawn $SCRIPTS/maximize.sh
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 ## I.e. if there are two windows within a frame, the grid layout is skipped.
-#hc keybind $Mod-space                                                           \
-#            or , and . compare tags.focus.curframe_wcount = 2                   \
-#                     . cycle_layout +1 vertical horizontal max vertical grid    \
-#               , cycle_layout +1
-#
+hc keybind $Mod-space                                                           \
+            or , and . compare tags.focus.curframe_wcount = 2                   \
+                     . cycle_layout +1 horizontal max    \
+               , cycle_layout +1
+
 # mouse
 hc mouseunbind --all
 hc mousebind $Mod-Button1 move

@@ -35,7 +35,7 @@ in
       #TODO: See if the use of xsession could be a better way of doing it
       home.file.".xinitrc" = {
         text = ''
-        ${cfg.XtraConfig}
+        test -f $HOME/.screenlayout/default.sh && sh $HOME/.screenlayout/default.sh
         exec dbus-launch --exit-with-x11 herbstluftwm
         '';
       };
