@@ -7,7 +7,6 @@ in
   options.shangrila.apps.gui = with types; {
     enable = mkBoolOpt false "Whether or not to enable gui apps.";
     nvidia = mkBoolOpt false "Whether or not to enable nvidia drivers.";
-    XtraConfig = mkStrOpt "" "Extra configurations for xinitrc.";
   };
 
   config = mkIf cfg.enable {

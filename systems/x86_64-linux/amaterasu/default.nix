@@ -11,9 +11,6 @@ with lib;
       gui = {
         enable = true;
         nvidia = true;
-        XtraConfig = ''
-        nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DP-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
-        '';
       };
     };
   };
