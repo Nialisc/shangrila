@@ -12,6 +12,7 @@ with lib;
         enable = true;
         nvidia = true;
       };
+      work= enabled;
     };
   };
 
