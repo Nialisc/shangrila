@@ -11,6 +11,7 @@ with lib;
       gui = {
         enable = true;
         nvidia = true;
+        awesome = true;
       };
       work= enabled;
     };

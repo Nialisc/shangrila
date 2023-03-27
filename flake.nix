@@ -15,6 +15,8 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
   };
 
   outputs = inputs:
@@ -27,6 +29,8 @@
     lib.mkFlake {
       package-namespace = "shangrila";
       channels-config.allowUnfree = true;
+
+      overlays = [ inputs.nixpkgs-f2k.overlays.default ];
 
       systems.modules = with inputs; [
         home-manager.nixosModules.home-manager

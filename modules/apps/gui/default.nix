@@ -7,6 +7,8 @@ in
   options.shangrila.apps.gui = with types; {
     enable = mkBoolOpt false "Whether or not to enable gui apps.";
     nvidia = mkBoolOpt false "Whether or not to enable nvidia drivers.";
+    herbstluft = mkBoolOpt false "Whether or not to enable herbstluftwm.";
+    awesome = mkBoolOpt false "Whether or not to enable awesomewm.";
   };
 
   config = mkIf cfg.enable {
