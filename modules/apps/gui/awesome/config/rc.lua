@@ -113,10 +113,13 @@ mytextclock = wibox.widget.textclock()
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
+    screen_count = screen.count()
+    layout = awful.layout.layouts[1]
+
     if s.index == 1 then
-        awful.tag({ "1", "2", "3", "4", "5" }, s, awful.layout.layouts[1])
+        awful.tag({ "1", "2", "3", "4", "5" }, s, layout)
     elseif s.index == 2 then
-        awful.tag({ "6", "7", "8", "9", "10" }, s, awful.layout.layouts[1])
+        awful.tag({ "6", "7", "8", "9", "10" }, s, layout)
     end
 
     -- Create a promptbox for each screen
@@ -315,9 +318,11 @@ awful.keyboard.append_global_keybindings({
         description = "only view tag",
         group       = "tag",
         on_press    = function (index)
-            local screen = awful.screen.focused()
-            local tag = screen.tags[index]
+            local tags = root.tags()
+            local tag = tags[index]
+            local screen = tag.screen
             if tag then
+                awful.screen.focus(screen)
                 tag:view_only()
             end
         end,
@@ -329,9 +334,13 @@ awful.keyboard.append_global_keybindings({
         group       = "tag",
         on_press    = function (index)
             if client.focus then
-                local tag = client.focus.screen.tags[index]
+                local tags = root.tags()
+                local tag = tags[index]
+                local screen = tag.screen
                 if tag then
                     client.focus:move_to_tag(tag)
+                    awful.screen.focus(screen)
+                    tag:view_only()
                 end
             end
         end,
@@ -360,7 +369,7 @@ client.connect_signal("request::default_keybindings", function()
                 c:raise()
             end,
             {description = "toggle fullscreen", group = "client"}),
-        awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+        awful.key({ modkey   }, "q",      function (c) c:kill()                         end,
                 {description = "close", group = "client"}),
         awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
                 {description = "toggle floating", group = "client"}),
@@ -438,58 +447,11 @@ ruled.client.connect_signal("request::rules", function()
         properties = { floating = true }
     }
 
-    -- Add titlebars to normal clients and dialogs
-    ruled.client.append_rule {
-        id         = "titlebars",
-        rule_any   = { type = { "normal", "dialog" } },
-        properties = { titlebars_enabled = true      }
-    }
-
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- ruled.client.append_rule {
     --     rule       = { class = "Firefox"     },
     --     properties = { screen = 1, tag = "2" }
     -- }
-end)
--- }}}
-
--- {{{ Titlebars
--- Add a titlebar if titlebars_enabled is set to true in the rules.
-client.connect_signal("request::titlebars", function(c)
-    -- buttons for the titlebar
-    local buttons = {
-        awful.button({ }, 1, function()
-            c:activate { context = "titlebar", action = "mouse_move"  }
-        end),
-        awful.button({ }, 3, function()
-            c:activate { context = "titlebar", action = "mouse_resize"}
-        end),
-    }
-
-    awful.titlebar(c).widget = {
-        { -- Left
-            awful.titlebar.widget.iconwidget(c),
-            buttons = buttons,
-            layout  = wibox.layout.fixed.horizontal
-        },
-        { -- Middle
-            { -- Title
-                halign = "center",
-                widget = awful.titlebar.widget.titlewidget(c)
-            },
-            buttons = buttons,
-            layout  = wibox.layout.flex.horizontal
-        },
-        { -- Right
-            awful.titlebar.widget.floatingbutton (c),
-            awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
-            awful.titlebar.widget.closebutton    (c),
-            layout = wibox.layout.fixed.horizontal()
-        },
-        layout = wibox.layout.align.horizontal
-    }
 end)
 -- }}}
 
