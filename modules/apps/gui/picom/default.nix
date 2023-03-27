@@ -5,7 +5,7 @@ let cfg = config.shangrila.apps.gui;
 in
 {
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ picom ];
+    environment.systemPackages = with pkgs; [ picom-pijulius ];
     
     shangrila.home.extraOptions = hm: {
       home.file.".config/picom" = {
