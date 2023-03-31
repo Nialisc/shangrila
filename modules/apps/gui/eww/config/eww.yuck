@@ -48,7 +48,7 @@
       (item :name "time" :label "" :value "${time}")
     )
     (section
-      (item :name "battery" :label "" :value "${EWW_BATTERY.BAT1.capacity}%")
+      (item :name "battery" :label "" :value "${EWW_BATTERY.BAT0.capacity}%")
       (item :name "date" :label "" :value "${date}")
     )
   )
