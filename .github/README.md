@@ -25,15 +25,18 @@
 
 > **Warning**
 >
-> All this setup has been made for my use cases. You probably might want to take inspirations instead of using it without modifications.
+> All this setup has been made for my use cases. I recommend you to take inspirations from it instead of using it without modifications.
 
 Details in comming ...
 
 ## Roadmap
 - [ ] Multi monitor setup
+- [ ] Wallpaper engine
+- [ ] Lockscreen
 - [ ] Inter nerd font
 - [ ] Finish eww bar
 - [ ] Neovim config
+- [ ] Scratchpad
 - [ ] Eww notifications
 - [ ] Eww app launcher
 - [ ] Better readme
