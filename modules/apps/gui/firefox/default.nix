@@ -15,6 +15,7 @@ in
     shangrila.home.extraOptions = {
       programs.firefox = {
         enable = true;
+        package = pkgs.firefox-wayland;
 
         profiles.${config.shangrila.user.name} = {
           id = 0;

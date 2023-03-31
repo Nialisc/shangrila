@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs:
@@ -30,10 +30,9 @@
       package-namespace = "shangrila";
       channels-config.allowUnfree = true;
 
-      overlays = [ inputs.nixpkgs-f2k.overlays.default ];
-
       systems.modules = with inputs; [
         home-manager.nixosModules.home-manager
+        hyprland.nixosModules.default
       ];
     };
 }

@@ -37,11 +37,11 @@ in
           allowed-users = users;
           substituters = [
             "https://cache.nixos.org?priority=10"
-            "https://fortuneteller2k.cachix.org"
+            "https://hyprland.cachix.org"
           ];
           trusted-public-keys = [
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-            "fortuneteller2k.cachix.org-1:kXXNkMV5yheEQwT0I4XYh1MaCSz+qg72k8XAi2PthJI="
+            "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
           ];
         };
 

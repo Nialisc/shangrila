@@ -6,7 +6,7 @@ in
 {
   config = mkIf cfg.enable {
     environment = {
-      systemPackages = with pkgs; [ eww ];
+      systemPackages = with pkgs; [ eww-wayland ];
     };
 
     shangrila.home.extraOptions = hm: {

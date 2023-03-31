@@ -8,12 +8,8 @@ with lib;
     system = enabled;
     apps = {
       cli = enabled;
-      gui = {
-        enable = true;
-        nvidia = true;
-        awesome = true;
-      };
-      work= enabled;
+      gui = enabled;
+      work = enabled;
     };
   };
 
