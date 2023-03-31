@@ -17,6 +17,7 @@ in
         light
         xfce.thunar
         chromium
+        wev
         slurp
       ];
     };
