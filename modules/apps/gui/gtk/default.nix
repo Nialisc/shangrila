@@ -12,7 +12,12 @@ in
         enable = true;
         theme = {
           name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
-          package = pkgs.catppuccin-gtk;
+          package = pkgs.catppuccin-gtk.override {
+            accents = [ "rosewater" ];
+            size = "compact";
+            tweaks = [ "rimless" ];
+            variant = "frappe";
+          };
         };
         cursorTheme = {
           name = "Dracula-cursors";

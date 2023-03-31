@@ -64,6 +64,7 @@
     :height "30px"
   :anchor "top center")
   :stacking "bg"
+  :exclusive true
   :reserve (struts :distance "30px" :side "top")
   :windowtype "dock"
   :wm-ignore false

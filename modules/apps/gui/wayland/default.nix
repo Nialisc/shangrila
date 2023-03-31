@@ -5,16 +5,6 @@ let cfg = config.shangrila.apps.gui;
 in
 {
   config = mkIf cfg.enable {
-    xdg = {
-      portal = {
-        enable = true;
-        wlr = enabled;
-        extraPortals = with pkgs; [
-          xdg-desktop-portal-gtk
-        ];
-      };
-    };
-
     services.dbus.enable = true;
 
     environment.sessionVariables = {
