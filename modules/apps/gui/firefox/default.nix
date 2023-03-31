@@ -9,6 +9,7 @@ in
     environment = {
       sessionVariables = {
         XDG_DESKTOP_DIR = "$HOME";
+        BROWSER = "firefox";
       };
     };
 
