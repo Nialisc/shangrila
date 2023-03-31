@@ -37,7 +37,7 @@ in
       group = "users";
 
       uid = 1000;
-      extraGroups = [ "wheel" ] ++ cfg.extraGroups;
+      extraGroups = [ "wheel" "networkmanager" ] ++ cfg.extraGroups;
     } // cfg.extraOptions;
   };
 }

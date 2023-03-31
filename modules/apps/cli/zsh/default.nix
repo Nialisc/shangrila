@@ -31,12 +31,6 @@ in
           enableAutosuggestions = true;
           enableSyntaxHighlighting = true;
 
-          initExtra = ''
-            if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-              startx
-            fi
-          '';
-
           plugins = [];
         };
       };
