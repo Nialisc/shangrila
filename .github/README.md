@@ -19,7 +19,13 @@
 <br>
 <br>
 
-> Disclaimer: This configuration is inpired by the awesome work of [Jake Hamilton](https://github.com/jakehamilton), thanks for all your efforts
+> **Note**
+>
+> This configuration is inpired by the awesome work of [Jake Hamilton](https://github.com/jakehamilton), thanks for all your efforts.
+
+> **Warning**
+>
+> All this setup has been made for my use cases. You probably might want to take inspirations instead of using it without modifications.
 
 Details in comming ...
 
