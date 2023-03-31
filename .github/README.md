@@ -30,8 +30,10 @@
 Details in comming ...
 
 ## Roadmap
+- [ ] Multi monitor setup
 - [ ] Inter nerd font
 - [ ] Finish eww bar
 - [ ] Neovim config
-- [ ] Dunst config
+- [ ] Eww notifications
+- [ ] Eww app launcher
 - [ ] Better readme
