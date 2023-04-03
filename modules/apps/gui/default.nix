@@ -19,6 +19,7 @@ in
         chromium
         wev
         slurp
+        swww
       ];
     };
   };

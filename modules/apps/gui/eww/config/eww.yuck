@@ -65,7 +65,7 @@
     :height "30px"
     :anchor "top center"
   )
-  :stacking "bg"
+  :stacking "fg"
   :exclusive true
   :reserve (struts :distance "30px" :side "top")
   :windowtype "dock"
