@@ -14,6 +14,7 @@ in
         slack
         zoom-us
         nginx
+        k9s
       ];
     };
   };

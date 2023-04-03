@@ -43,6 +43,8 @@ in
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
             "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
           ];
+          extra-trusted-substituters = [ "https://cache.floxdev.com" ];
+          extra-trusted-public-keys = [ "_FLOX_PUBLIC_KEYS()" ];
         };
 
         gc = {

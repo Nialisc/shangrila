@@ -31,7 +31,11 @@ in
           enableAutosuggestions = true;
           enableSyntaxHighlighting = true;
 
-          plugins = [];
+          initExtra = ''
+            set -o vi
+      
+            source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+          '';
         };
       };
     };

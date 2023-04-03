@@ -15,9 +15,10 @@ in
       btop
       fzf
       ranger
-      asdf-vm
       neofetch
       lazygit
+      steam-run
+      gnumake
     ];
   };
 }
