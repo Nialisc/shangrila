@@ -6,7 +6,9 @@ in
 {
   config = mkIf cfg.enable {
     environment = {
-      systemPackages = with pkgs; [ rofi-wayland ];
+      systemPackages = with pkgs; 
+        optionals cfg.wayland [ rofi-wayland ] ++
+        optionals cfg.xorg [ rofi ];
     };
 
     shangrila.home.extraOptions = hm: {

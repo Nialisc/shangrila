@@ -4,7 +4,7 @@ with lib;
 let cfg = config.shangrila.apps.gui;
 in
 {
-  config = mkIf cfg.enable {
+  config = mkIf (cfg.enable && cfg.wayland) {
     services.dbus.enable = true;
 
     environment.sessionVariables = {

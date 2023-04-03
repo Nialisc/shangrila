@@ -8,7 +8,10 @@ with lib;
     system = enabled;
     apps = {
       cli = enabled;
-      gui = enabled;
+      gui = {
+        enable = true;
+        wayland = true;
+      };
       work = enabled;
     };
   };
