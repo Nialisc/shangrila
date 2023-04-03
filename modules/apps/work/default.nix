@@ -15,6 +15,7 @@ in
         zoom-us
         nginx
         k9s
+        sops
       ];
     };
   };
