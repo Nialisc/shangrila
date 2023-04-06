@@ -6,8 +6,6 @@ in
 {
   options.shangrila.apps.gui = with types; {
     enable = mkBoolOpt false "Whether or not to enable gui apps.";
-    wayland = mkBoolOpt false "Whether or not to use wayland.";
-    xorg = mkBoolOpt false "Whether or not to use xorg.";
     nvidia = mkBoolOpt false "Whether or not to use nvidia drivers.";
   };
 
@@ -19,20 +17,22 @@ in
         light
         xfce.thunar
         chromium
-      ] ++ optionals cfg.wayland [
-        wev
-        slurp
-        swww
-      ] ++ optionals cfg.xorg [
         arandr
         autorandr
-        xev
+        xorg.xev
         maim
         nitrogen
       ];
     };
 
-    services.xserver.videoDrivers = mkIf cfg.nvidia [ "nvidia" ];
-    hardware.opengl.enable = true;
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      extraPackages = with pkgs; [
+        vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+    };
   };
 }

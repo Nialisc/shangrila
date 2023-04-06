@@ -14,7 +14,7 @@ in
       };
     };
     console = {
-      keyMap = "fr";
+      keyMap = "us";
     };
     fonts.fonts = with pkgs; [
       (nerdfonts.override { fonts = [ "FiraCode" ]; })

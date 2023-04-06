@@ -4,7 +4,7 @@ with lib;
 let cfg = config.shangrila.apps.gui;
 in
 {
-  config = mkIf (cfg.enable && cfg.xorg) {
+  config = mkIf cfg.enable {
     environment = {
       systemPackages = with pkgs; [ sxhkd ];
       sessionVariables = {

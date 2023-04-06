@@ -2,6 +2,7 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x picom > /dev/null || picom &
 pgrep -x eww > /dev/null || eww daemon && eww open bar &
 
 # Monitors

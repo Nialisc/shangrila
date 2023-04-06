@@ -11,7 +11,7 @@ in
       gtk = {
         enable = true;
         theme = {
-          name = "Catppuccin-Frappe-Compact-Rosewater-Dark";
+          name = "Catppuccin";
           package = pkgs.catppuccin-gtk.override {
             accents = [ "rosewater" ];
             size = "compact";
