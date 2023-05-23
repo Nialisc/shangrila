@@ -19,6 +19,10 @@ in
       lazygit
       steam-run
       gnumake
+      flyctl
+      ffmpeg
+      just
+      yt-dlp
     ];
   };
 }

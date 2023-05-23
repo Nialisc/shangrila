@@ -15,8 +15,6 @@
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs:
@@ -32,7 +30,6 @@
 
       systems.modules = with inputs; [
         home-manager.nixosModules.home-manager
-        hyprland.nixosModules.default
       ];
     };
 }

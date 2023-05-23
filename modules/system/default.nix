@@ -16,6 +16,7 @@ in
       usbutils
       acpi
       gcc
+      inotify-tools
     ];
   };
 }

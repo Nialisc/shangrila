@@ -22,6 +22,9 @@ in
         xorg.xev
         maim
         nitrogen
+        gparted
+        meld
+        betterlockscreen
       ];
     };
 

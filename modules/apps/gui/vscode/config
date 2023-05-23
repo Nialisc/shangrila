@@ -7,5 +7,9 @@
     "editor.fontWeight": "normal",
     "editor.fontLigatures": true,
     "editor.fontFamily": "FiraCode Nerd Font",
-    "workbench.colorTheme": "Catppuccin Frappé"
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative"
 }
