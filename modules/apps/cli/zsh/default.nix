@@ -5,6 +5,12 @@ let cfg = config.shangrila.apps.cli;
 in
 {
   config = mkIf cfg.enable {
+    programs.zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      histFile = "$XDG_CACHE_HOME/zsh.history";
+    };
+    
     shangrila.home.extraOptions = {
       home.shellAliases = {
         ll = "ls -lsh --color";
