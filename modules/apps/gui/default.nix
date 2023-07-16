@@ -25,6 +25,8 @@ in
         gparted
         meld
         betterlockscreen
+        obs-studio
+        qutebrowser
       ];
     };
 

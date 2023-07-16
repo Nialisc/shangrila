@@ -23,6 +23,7 @@ in
       ffmpeg
       just
       yt-dlp
+      unzip
     ];
   };
 }

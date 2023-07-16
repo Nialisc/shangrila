@@ -14,9 +14,6 @@ in
         slack
         zoom-us
         nginx
-        k9s
-        awscli2
-        sops
       ];
     };
   };

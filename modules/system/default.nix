@@ -17,6 +17,7 @@ in
       acpi
       gcc
       inotify-tools
+      openssl
     ];
   };
 }
