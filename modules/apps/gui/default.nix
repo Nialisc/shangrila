@@ -26,7 +26,8 @@ in
         meld
         betterlockscreen
         obs-studio
-        qutebrowser
+        vieb
+        dunst
       ];
     };
 

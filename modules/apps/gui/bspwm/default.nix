@@ -6,7 +6,7 @@ let
 in
 {
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ bspwm ];
+    environment.systemPackages = with pkgs; [ bspwm xdo xdotool ];
     services = {
       xserver = {
         windowManager.bspwm = enabled;

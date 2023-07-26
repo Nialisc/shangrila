@@ -16,6 +16,11 @@ in
   };
 
   config = {
+    environment.sessionVariables = {
+      LOCATION = "~/.nix";
+      PATH = "$PATH:$LOCATION/scripts";
+    };
+    
     shangrila.home.extraOptions = {
       home.file = {
         "Documents/.keep".text = "";

@@ -24,6 +24,7 @@ in
       just
       yt-dlp
       unzip
+      xclip
     ];
   };
 }
