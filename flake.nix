@@ -25,7 +25,7 @@
     };
   in
     lib.mkFlake {
-      package-namespace = "shangrila";
+      namespace = "shangrila";
       channels-config.allowUnfree = true;
 
       systems.modules = with inputs; [

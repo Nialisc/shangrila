@@ -1,6 +1,7 @@
 { lib, ... }:
 
 with lib;
+with lib.shangrila;
 {
   imports = [ ./hardware.nix ];
 

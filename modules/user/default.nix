@@ -1,6 +1,7 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
+with lib.shangrila;
 let cfg = config.shangrila.user;
 in
 {
