@@ -6,6 +6,11 @@ in
 {
   config = mkIf (cfg.enable && cfg.nvidia) {
     services.xserver.videoDrivers = [ "nvidia" ];
-    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    hardware.nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
   };
 }

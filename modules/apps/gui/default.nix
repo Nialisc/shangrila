@@ -14,31 +14,13 @@ in
       systemPackages = with pkgs; [
         feh
         mpv
-        light
         xfce.thunar
-        chromium
-        arandr
-        autorandr
-        xorg.xev
-        maim
-        nitrogen
+        brave
         gparted
         meld
-        betterlockscreen
-        obs-studio
-        vieb
-        dunst
       ];
     };
 
-    hardware.opengl = {
-      enable = true;
-      driSupport = true;
-      extraPackages = with pkgs; [
-        vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-        vaapiVdpau
-        libvdpau-va-gl
-      ];
-    };
+    hardware.opengl.enable = true;
   };
 }
