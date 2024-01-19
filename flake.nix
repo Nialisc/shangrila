@@ -2,12 +2,12 @@
   description = "Personnal NixOS setup for my everyday use";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url =
-        "github:nix-community/home-manager/release-23.05";
+        "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -17,15 +17,22 @@
     };
   };
 
-  outputs = inputs:
-  let
+  outputs = inputs: let
     lib = inputs.snowfall-lib.mkLib {
       inherit inputs;
       src = ./.;
+
+      snowfall = {
+        meta = {
+          name = "shangrila";
+          title = "ShangriLa";
+        };
+
+        namespace = "shangrila";
+      };
     };
   in
     lib.mkFlake {
-      namespace = "shangrila";
       channels-config.allowUnfree = true;
 
       systems.modules = with inputs; [
