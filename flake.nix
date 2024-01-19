@@ -17,25 +17,22 @@
     };
   };
 
-  outputs = inputs: let
-    lib = inputs.snowfall-lib.mkLib {
+  outputs = inputs:
+    inputs.snowfall-lib.mkFlake {
       inherit inputs;
       src = ./.;
 
       snowfall = {
-        meta = {
-          name = "shangrila";
-          title = "ShangriLa";
-        };
-
         namespace = "shangrila";
-      };
-    };
-  in
-    lib.mkFlake {
-      channels-config.allowUnfree = true;
 
-      systems.modules = with inputs; [
+        meta = {
+          name = "ShangriLa";
+          title = "Personnal NixOS setup for my everyday use";
+        };
+      };
+
+      channels-config.allowUnfree = true;
+      systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
       ];
     };
