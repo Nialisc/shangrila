@@ -31,6 +31,14 @@
       };
     };
   in {
+    templates = {
+      default = {
+        description = ''
+          Shangrila
+        '';
+        path = ./.;
+      };
+    };
     nixosConfigurations = {
       "${env.hostname}" = nixpkgs.lib.nixosSystem {
 	      specialArgs = { 
