@@ -1,39 +1,47 @@
 {
-  description = "Personnal NixOS setup for my everyday use";
+  description = "Peace of mind for dev env";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    home-manager = {
-      url =
-        "github:nix-community/home-manager/release-23.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    snowfall-lib = {
-      url = "github:snowfallorg/lib?ref=v2.1.1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpgs.url = "nixpkgs/23.11";
   };
 
-  outputs = inputs:
-    inputs.snowfall-lib.mkFlake {
-      inherit inputs;
-      src = ./.;
+  outputs = inputs@{ nixpkgs, ... }:
+  let
+    system = "x86_64-linux";
 
-      snowfall = {
-        namespace = "shangrila";
-
-        meta = {
-          name = "ShangriLa";
-          title = "Personnal NixOS setup for my everyday use";
-        };
+    env = {
+      user = {
+        username = "nialis";
+        fullname = "Sylvain Colinon";
+        email = "sylvain.colignon@nialis.xyz";
       };
 
-      channels-config.allowUnfree = true;
-      systems.modules.nixos = with inputs; [
-        home-manager.nixosModules.home-manager
-      ];
+      hostname = "shangrila";
+      locale = "fr_FR.UTF-8";
+      timezone = "Europe/Paris";
+      keymap = "us";
+      keymap_variant = "";
+      directory = "/home/${env.user.username}/.dotfiles";
     };
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+	      allowUnfree = true;
+      };
+    };
+  in {
+    nixosConfigurations = {
+      "${env.hostname}" = nixpkgs.lib.nixosSystem {
+	      specialArgs = { 
+          inherit system;
+          inherit env;
+        };
+	      modules = [
+          ./system/default.nix
+          ./apps/default.nix
+        ];
+      };
+    };
+  };
 }
